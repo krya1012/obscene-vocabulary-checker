@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# Allow directory traversal
+!*/
+
+# Keep Go source and module files
+!*.go
+!go.mod
+!go.sum
+
+# Keep this file
+!.gitignore
