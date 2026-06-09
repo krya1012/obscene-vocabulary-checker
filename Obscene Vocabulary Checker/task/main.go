@@ -27,12 +27,19 @@ func main() {
 	}
 
 	reader := bufio.NewReader(os.Stdin)
-	input, _ := reader.ReadString('\n')
-	input = strings.TrimSpace(input)
+	for {
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
 
-	if taboo[strings.ToLower(input)] {
-		fmt.Println("True")
-	} else {
-		fmt.Println("False")
+		if input == "exit" {
+			fmt.Println("Bye!")
+			return
+		}
+
+		if taboo[strings.ToLower(input)] {
+			fmt.Println(strings.Repeat("*", len(input)))
+		} else {
+			fmt.Println(input)
+		}
 	}
 }
