@@ -36,10 +36,13 @@ func main() {
 			return
 		}
 
-		if taboo[strings.ToLower(input)] {
-			fmt.Println(strings.Repeat("*", len(input)))
-		} else {
-			fmt.Println(input)
+		tokens := strings.Fields(input)
+		for i, token := range tokens {
+			clean := strings.TrimRight(token, ".,!?;:'\"")
+			if taboo[strings.ToLower(clean)] {
+				tokens[i] = strings.Repeat("*", len(clean)) + token[len(clean):]
+			}
 		}
+		fmt.Println(strings.Join(tokens, " "))
 	}
 }
