@@ -1,10 +1,14 @@
 # Changelog
 
-## [Unreleased]
+## [0.4.0] — 2026-06-09
 
-### Planned
-- Stage 3: Censor taboo words in a stream of input words
-- Stage 4: Correct a full sentence by censoring taboo words
+### Added
+- Stage 4: censor taboo words in full sentences — strips trailing punctuation for matching, preserves it in output
+
+## [0.3.0] — 2026-06-09
+
+### Added
+- Stage 3: censor taboo words in a word-by-word input loop; replaces each match with `*` × len(word); exits on `exit`
 
 ## [0.2.0] — 2026-06-09
 
