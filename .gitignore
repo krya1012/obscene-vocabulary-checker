@@ -11,3 +11,6 @@
 
 # Keep this file
 !.gitignore
+
+# Keep documentation
+!*.md

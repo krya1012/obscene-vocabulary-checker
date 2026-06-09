@@ -3,9 +3,13 @@
 ## [Unreleased]
 
 ### Planned
-- Stage 2: Check whether a word is taboo (case-insensitive lookup)
 - Stage 3: Censor taboo words in a stream of input words
 - Stage 4: Correct a full sentence by censoring taboo words
+
+## [0.2.0] — 2026-06-09
+
+### Added
+- Stage 2: case-insensitive taboo word lookup — reads one word from stdin, prints `True`/`False`
 
 ## [0.1.0] — 2026-06-09
 
